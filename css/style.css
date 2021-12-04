@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
 
 :root{
-  --orange:#ffa500;
+  --orange:#ffbb00;
 }
 
 *{
   font-family: 'Nunito', sans-serif;
-  margin:0; padding:0;
+  margin:0;
+   padding:0;
   box-sizing: border-box;
   text-transform: capitalize;
   outline: none; border:none;
@@ -18,7 +19,6 @@
   background:var(--orange);
   color:#fff;
 }
-
 
 header{
   position: fixed;
@@ -32,7 +32,7 @@ header{
 }
 
 header .logo{
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: bolder;
   color:#fff;
   text-transform: uppercase;
@@ -45,10 +45,57 @@ header .logo span{
 
 header .navbar a{
   color:#fff;
-  font-size: 2rem;
+  font-size: 1.25rem;
   margin:0 .8rem;
 }
 
 header .navbar a:hover{
+  color:var(--orange);
+}
+
+header .icons i{
+  font-size: 1.25rem;
+  color:#fff;
+  cursor: pointer;
+  margin-right: 2rem;
+}
+
+header .icons i:hover{
+  color:var(--orange);
+}
+
+header .search-bar-container{
+  position: absolute;
+  top:100%; left: 0; right:0;
+  padding:1.5rem 2rem;
+  background:#333;
+  border-top: .1rem solid rgba(255,255,255,.2);
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+header .search-bar-container.active{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+header .search-bar-container #search-bar{
+  width:100%;
+  padding:1rem;
+  text-transform: none;
+  color:#333;
+  font-size: 1.7rem;
+  border-radius: .5rem;
+}
+
+header .search-bar-container label{
+  color:#fff;
+  cursor: pointer;
+  font-size: 3rem;
+  margin-left: 1.5rem;
+}
+
+header .search-bar-container label:hover{
   color:var(--orange);
 }
