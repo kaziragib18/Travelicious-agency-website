@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root{
-  --orange:#ffbb00;
+  --orange:#e0251f;
 }
 
 *{
-  font-family: 'Nunito', sans-serif;
+  font-family: 'urbanist', sans-serif;
   margin:0;
    padding:0;
   box-sizing: border-box;
@@ -18,6 +18,22 @@
 *::selection{
   background:var(--orange);
   color:#fff;
+}
+
+.btn{
+  display: inline-block;
+  margin-top: 1rem;
+  background:var(--orange);
+  color:#fff;
+  padding:.8rem .8rem;
+  border:.2rem solid var(--orange);
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+.btn:hover{
+  background:rgba(255, 165, 0,.2);
+  color:var(--orange);
 }
 
 header{
@@ -78,24 +94,106 @@ header .search-bar-container{
 
 header .search-bar-container.active{
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
+} 
 
 header .search-bar-container #search-bar{
   width:100%;
   padding:1rem;
   text-transform: none;
   color:#333;
-  font-size: 1.7rem;
+  font-size: 1.1rem;
   border-radius: .5rem;
 }
 
 header .search-bar-container label{
   color:#fff;
   cursor: pointer;
-  font-size: 3rem;
+  font-size: 2.2rem;
   margin-left: 1.5rem;
 }
 
 header .search-bar-container label:hover{
   color:var(--orange);
+}
+
+.login-form-container{
+  position: fixed;
+  top:-120%; left: 0;
+  z-index: 10000;
+  min-height: 100vh;
+  width:100%;
+  background:rgba(0,0,0,.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form-container.active{
+  top:0;
+}
+
+.login-form-container form{
+  margin:1.25rem;
+  padding:1.25rem 2rem;
+  border-radius: .5rem;
+  background:#fff;
+  width:50rem;
+}
+
+.login-form-container form h3{
+  font-size: 2rem;
+  color:#444;
+  text-transform: uppercase;
+  text-align: center;
+  padding:1rem 0;
+}
+
+.login-form-container form .box{
+  width:100%;
+  font-size: 1.2rem;
+  color:#333;
+  padding:1rem;
+  margin:.6rem 0;
+  border:.1rem solid rgba(0,0,0,.3);
+  text-transform: none;
+}
+
+.login-form-container form .box:focus{
+  border-color: var(--orange);;
+}
+
+.login-form-container form #remember{
+  margin:2rem 0;
+}
+
+.login-form-container form label{
+  font-size: 1.2rem;
+}
+
+.login-form-container form .btn{
+  width:100%;
+  display: block;
+}
+
+.login-form-container form p{
+  padding:.5rem 0;
+  font-size: 1.1rem;
+  color:#666;
+}
+
+.login-form-container form p a{
+  color:var(--orange);
+}
+
+.login-form-container form p a:hover{
+  color:#333;
+  text-decoration: underline;
+}
+
+.login-form-container #form-close{
+  position: absolute;
+  top:2rem; right:3rem;
+  font-size: 2rem;
+  color:#fff;
+  cursor: pointer;
 }
